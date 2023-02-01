@@ -1,0 +1,23 @@
+#img-place{
+    width: 100%;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    position: absolute;
+    font-size: 200px;
+    color: #000;
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+img{
+    width: 100%;
+    max-height: 300px;
+}

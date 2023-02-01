@@ -47,7 +47,7 @@ class SiteController extends Controller
         $num_rows = DB::table('produtos')->where('CAT_ID', '=', $id)->count();
         $produtos = DB::select('SELECT * FROM produtos WHERE CAT_ID = :CAT_ID', ['CAT_ID' => $id]);
         $categoria = Categoria::find($id);
-            return view('produtos', ['produtos' => $produtos, 'categoria' => $categoria, 'num_rows' => $num_rows]);
+        return view('produtos', ['produtos' => $produtos, 'categoria' => $categoria, 'num_rows' => $num_rows]);
     }
 
     // Deleta um produto
