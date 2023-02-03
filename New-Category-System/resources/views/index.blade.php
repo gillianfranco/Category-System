@@ -1,2 +1,7 @@
 @extends('layouts.base')
-@section('title', 'Produtos')
+@section('style')
+    <link rel="stylesheet" href="index\style.css">
+@endsection
+@section('title')
+    <p id="title">Sistema de Categorias</p>
+@endsection

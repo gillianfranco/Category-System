@@ -9,9 +9,8 @@
     padding: 0;
 }
 
-p{
+#title-place{
     position: absolute;
-    font-size: 200px;
     color: #000;
     text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
     z-index: 1;
