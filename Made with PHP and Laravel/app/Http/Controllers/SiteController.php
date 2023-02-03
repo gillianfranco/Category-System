@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Categoria;
 use App\Models\Produto;
+use App\Models\Subcategoria;
+use App\Models\Imagem;
 use Illuminate\Support\Facades\DB;
 
 class SiteController extends Controller
@@ -13,7 +15,8 @@ class SiteController extends Controller
     // Retorna a página de cadastro de produtos junto com os dados na tabela de categorias
     public function index(){
         $categorias = Categoria::get();
-        return view('index', ['categorias' => $categorias]);
+        $subcategorias = Subcategoria::get();
+        return view('index', ['categorias' => $categorias, 'subcategorias' => $subcategorias]);
     }
 
     // Coleta os dados para o registro de produtos
@@ -32,6 +35,19 @@ class SiteController extends Controller
     public function cadCat(Request $request){
         $categoria = $request->except('_token');
         Categoria::create($categoria);
+        return redirect('/');
+    }
+
+    // Retorna a página de registro de categorias
+    public function cadSubcat_View(){
+        $categorias = Categoria::get();
+        return view('cadSubcat_View', ['categorias' => $categorias]);
+    }
+
+    // Coleta os dados para o registro de subcategorias
+    public function cadSubcat(Request $request){
+        $subcategoria = $request->except('_token');
+        Subcategoria::create($subcategoria);
         return redirect('/');
     }
 

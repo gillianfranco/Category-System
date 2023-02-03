@@ -39,12 +39,12 @@
 </head>
 <body>
 	<div class="container">
-        <h1>Produtos da categoria {{ $categoria->categoria }} CAT_ID {{ $categoria->id }}</h1>
+        <h1>Produtos da categoria {{ $categoria->nome }} CAT_ID {{ $categoria->id }}</h1>
         @if($num_rows == 0)
             <div class="prod"><strong>Nenhum produto cadastrado!</strong></div>
         @else
-            @foreach($produtos as $prod)
-                <div class="prod"><strong>Produto: {{ $prod->produto }}</strong><br>Id: {{ $prod->id }}<br>Categoria: {{ $prod->CAT_ID }}<br>
+            @foreach($produtos as $produto)
+                <div class="prod"><strong>Produto: {{ $produto->nome }}</strong><br>Id: {{ $produto->id }}<br>Categoria: {{ $produto->CAT_ID }}<br>
                     <form method="POST" action="{{ route('SiteController.excluiProd', $prod->id) }}">
                         @csrf
                         @method('DELETE')

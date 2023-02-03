@@ -8,5 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Produto extends Model
 {
     use HasFactory;
-    public $fillable = ['id', 'produto', 'CAT_ID'];
+
+    public $fillable = ['id', 'nome', 'CAT_ID', 'SUBCAT_ID'];
 }

@@ -22,6 +22,10 @@ Route::post('/', [SiteController::class, 'cadProd'])->name('SiteController.cadPr
 Route::get('/Cadastro de Categorias', [SiteController::class, 'cadCat_View'])->name('SiteController.cadCat_View');
 Route::post('/Cadastro de Categorias', [SiteController::class, 'cadCat'])->name('SiteController.cadCat');
 
+// Página de registro de subcategorias
+Route::get('/Cadastro de Subcategorias', [SiteController::class, 'cadSubcat_View'])->name('SiteController.cadSubcat_View');
+Route::post('/Cadastro de Subcategorias', [SiteController::class, 'cadSubcat'])->name('SiteController.cadSubcat');
+
 // Página de categorias
 Route::get('/Lista de Categorias', [SiteController::class, 'categorias'])->name('SiteController.categorias');
 

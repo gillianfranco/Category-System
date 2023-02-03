@@ -12,8 +12,8 @@
 		@if($num_rows == 0)
 			<h2>Nenhuma categoria registrada!</h2>
 		@else
-			@foreach($categorias as $cat)
-				<div class="categorias"><a href="{{ route('SiteController.produtos', $cat->id) }}">{{ $cat->categoria }}</a></div>
+			@foreach($categorias as $categoria)
+				<div class="categorias"><a href="{{ route('SiteController.produtos', $categoria->id) }}">{{ $categoria->nome }}</a></div>
 			@endforeach
 		@endif
 		<div id="place-button">
