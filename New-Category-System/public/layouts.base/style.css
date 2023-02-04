@@ -1,3 +1,7 @@
+*{
+    font-family: "Roboto", sans-serif;
+}
+
 #img-place{
     width: 100%;
     max-height: 400px;
@@ -23,6 +27,8 @@ img{
 
 #title{
     font-size: 120px;
+    font-family: "Sofia", sans-serif;
+    color: green;
 }
 
 @media only screen and (max-width: 1200px){

@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="layouts.base\imgs\database-solid.svg">
     <link rel="stylesheet" href="layouts.base\style.css">
     @yield('style')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <title>Sistema de Categorias</title>
 </head>
 <body>
     <div class="container-fluid" id="img-place">
-        <div id="title-place">@yield('title')</div>
+        <div id="title-place" >@yield('title')</div>
         <img src="layouts.base/imgs/Above-the-fold.png" alt="Imagem de apresentação" class="img-fluid">
     </div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary border border-top border-success" id="menuBar">
