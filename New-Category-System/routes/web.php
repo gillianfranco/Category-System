@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CatController;
+use App\Http\Controllers\SubcatController;
+use App\Http\Controllers\ProdController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +17,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
-});
+    return view('pages.index');
+})->name('index');
+
+Route::get('/Registro de Categorias', [CatController::class, 'regCategorias'])->name('CatController.regCategorias');
+
+
+Route::get('/Registro de Subcategorias', [SubcatController::class, 'regSubcategorias'])->name('SubcatController.regSubcategoria');
+
+Route::get('/Registro de Produtos', [ProdController::class, 'regProdutos'])->name('SubcatController.regProdutos');
