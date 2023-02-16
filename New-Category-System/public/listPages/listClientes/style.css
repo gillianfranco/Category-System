@@ -1,0 +1,17 @@
+li a{
+    text-decoration: none;
+}
+
+thead{
+    flex-direction: row;
+    justify-content: center;
+}
+
+tr a{
+    height: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    padding-top: -5px;
+}

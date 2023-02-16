@@ -10,5 +10,7 @@ class CatController extends Controller
         return view('pages.registros.regCategorias');
     }
 
-    
+    public function listCategorias(){
+        return view('pages.listas.listCategorias');
+    }
 }

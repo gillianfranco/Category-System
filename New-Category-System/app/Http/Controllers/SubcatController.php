@@ -9,4 +9,8 @@ class SubcatController extends Controller
     public function regSubcategorias(){
         return view('pages.registros.regSubcategorias');
     }
+
+    public function listSubcategorias(){
+        return view('pages.listas.listSubcategorias');
+    }
 }

@@ -1,4 +1,3 @@
-@extends('layouts.default')
 @extends('layouts.regBase')
 @section('style')
     <link rel="stylesheet" href="regPages/regCategorias/style.css">
