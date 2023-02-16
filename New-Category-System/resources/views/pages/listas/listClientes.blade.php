@@ -4,19 +4,20 @@
 @endsection
 @section('title', 'Lista de Clientes')
 @section('menubar-content')
-    <li class="nav-item d-flex position-absolute end-50">
-        <a class="btn btn-outline-success" href="{{ route('ClientController.regClientes') }}" style="text-decoration: none; float: right;">Novo Cliente</a> 
+    <li class="nav-item d-flex" style="margin-right: 20px;">
+        <a class="btn btn-outline-success" href="{{ route('ClientController.regClientes') }}" style="text-decoration: none;">Novo Cliente</a> 
     </li>
-    <li class="nav-item d-flex" style="margin-right: 100px">
-        <form class="d-flex" id="filtro" action="" method="get">
-            <div class="form-floating w-25 me-2">
-                <select class="form-select border border-success" id="floatingSelect" aria-label="Floating label select example"  style="height: 5px;">
-                    <option value="tudo">Tudo</option>
+    <li class="nav-item d-flex">
+        <form class="d-flex" id="filtro" action="" method="post">
+            @csrf
+            <div class="form-floating w-50 me-2">
+                <select class="form-select border border-success text-success" id="filtragem" name="filtragem" aria-label="Floating label select example"  style="height: 5px;">
+                    <option value="" selected disabled>--- Selecione ---</option>
+                    <option value="tudo" id="tudo">Tudo</option>
                     <option value="ultimo">Último</option>
                 </select>
-                <label class="text-success" for="floatingSelect">Filtro</label>
             </div>
-            <button class="btn btn-outline-success w-25" type="submit">Aplicar</button>
+            <button class="btn btn-outline-success w-50 me-10" id="" type="submit" style="margin-right: 50px" id="btnAplicar">Aplicar</button>
         </form>
     </li>
 @endsection
@@ -31,14 +32,10 @@
                 <th scope="col">Endereço</th>
             </tr>
         </thead>
-        <tbody class="text-success">
-            @foreach($clientes as $cliente)
-                <td>{{ $cliente->id }}</td>
-                <td>{{ $cliente->clienteNome }}</td>
-                <td>{{ $cliente->email }}</td>
-                <td>{{ $cliente->telefone }}</td>
-                <td>{{ $cliente->endereco }}</td>
-            @endforeach
+        <tbody class="text-success" id="table">
+            
         </tbody>
     </table>
+
+    <script src="listPages/listClientes/script.js"></script>
 @endsection

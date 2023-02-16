@@ -9,7 +9,7 @@ class ClientController extends Controller
 {
     public function listClientes(){
         $clientes = Cliente::get();
-        $ultimo = Client::orderBy('desc')->first();
+        $ultimo = Cliente::orderBy('id', 'desc')->first();
         return view('pages.listas.listClientes', ['clientes' => $clientes, 'ultimo' => $ultimo]);
     }
 
