@@ -8,12 +8,11 @@
         <a class="btn btn-outline-success" href="{{ route('ClientController.regClientes') }}" style="text-decoration: none;">Novo Cliente</a> 
     </li>
     <li class="nav-item d-flex">
-        <form class="d-flex" id="filtro" action="" method="post">
+        <form class="d-flex" id="filtro" action="{{ route('ClientController.tableListClientes') }}" method="post">
             @csrf
             <div class="form-floating w-50 me-2">
                 <select class="form-select border border-success text-success" id="filtragem" name="filtragem" aria-label="Floating label select example"  style="height: 5px;">
-                    <option value="" selected disabled>--- Selecione ---</option>
-                    <option value="tudo" id="tudo">Tudo</option>
+                    <option value="tudo">Tudo</option>
                     <option value="ultimo">Último</option>
                 </select>
             </div>
@@ -33,7 +32,35 @@
             </tr>
         </thead>
         <tbody class="text-success" id="table">
-            
+            @if(isset($clientes))
+                @foreach($clientes as $cliente)
+                    <tr>
+                        <td>{{ $cliente->id }}</td>
+                        <td>{{ $cliente->clienteNome }}</td>
+                        <td>{{ $cliente->email }}</td>
+                        <td>{{ $cliente->telefone }}</td>
+                        <td>{{ $cliente->endereco }}</td>
+                    </tr>
+                @endforeach
+            @if(isset($ultimo))
+                </tr>
+                    <td>{{ $ultimo->id }}</td>
+                    <td>{{ $ultimo->clienteNome }}</td>
+                    <td>{{ $ultimo->email }}</td>
+                    <td>{{ $ultimo->telefone }}</td>
+                    <td>{{ $ultimo->endereco }}</td>
+                </tr>
+            @else
+                @foreach($clientes as $cliente)
+                    <tr>
+                        <td>{{ $cliente->id }}</td>
+                        <td>{{ $cliente->clienteNome }}</td>
+                        <td>{{ $cliente->email }}</td>
+                        <td>{{ $cliente->telefone }}</td>
+                        <td>{{ $cliente->endereco }}</td>
+                    </tr>
+                @endforeach
+            @endif
         </tbody>
     </table>
 
