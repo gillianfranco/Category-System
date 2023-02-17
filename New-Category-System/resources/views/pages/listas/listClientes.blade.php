@@ -32,16 +32,6 @@
             </tr>
         </thead>
         <tbody class="text-success" id="table">
-            @if(isset($clientes))
-                @foreach($clientes as $cliente)
-                    <tr>
-                        <td>{{ $cliente->id }}</td>
-                        <td>{{ $cliente->clienteNome }}</td>
-                        <td>{{ $cliente->email }}</td>
-                        <td>{{ $cliente->telefone }}</td>
-                        <td>{{ $cliente->endereco }}</td>
-                    </tr>
-                @endforeach
             @if(isset($ultimo))
                 </tr>
                     <td>{{ $ultimo->id }}</td>
@@ -50,7 +40,7 @@
                     <td>{{ $ultimo->telefone }}</td>
                     <td>{{ $ultimo->endereco }}</td>
                 </tr>
-            @else
+            @elseif(isset($clientes))
                 @foreach($clientes as $cliente)
                     <tr>
                         <td>{{ $cliente->id }}</td>

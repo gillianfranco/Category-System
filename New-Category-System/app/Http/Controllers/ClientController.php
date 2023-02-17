@@ -13,19 +13,13 @@ class ClientController extends Controller
 
     public function tableListClientes(Request $request){
         $resposta = $request->filtragem;
-        if(isset($resposta)){
-            if($resposta == 'ultimo'){
-                $ultimo = Cliente::orderBy('id', 'desc')->first();
-                return view('pages.listas.listClientes', ['ultimo' => $ultimo]);
-            }else if($resposta == 'tudo'){
-                $clientes = Cliente::get();
-                return view('pages.listas.listClientes', ['clientes' => $clientes]);
-            }
-        }else{
+        if($resposta == 'ultimo'){
+            $ultimo = Cliente::orderBy('id', 'desc')->first();
+            return view('pages.listas.listClientes', ['ultimo' => $ultimo]);
+        }else if($resposta == 'tudo'){
             $clientes = Cliente::get();
             return view('pages.listas.listClientes', ['clientes' => $clientes]);
-        }
-        
+        }        
     }
 
     public function regClientes(){
