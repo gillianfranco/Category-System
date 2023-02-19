@@ -30,23 +30,23 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle active text-success" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" id="listas">Listas</a>
-                        <ul class="dropdown-menu border border-success" id="dropdown">
-                            <li><a class="dropdown-item text-success" href="{{ route('CatController.listCategorias') }}">Categorias</a></li>
-                            <li><a class="dropdown-item text-success" href="{{ route('SubcatController.listSubcategorias') }}">Subcategorias</a></li>
-                            <li><a class="dropdown-item text-success" href="{{ route('ProdController.listProdutos') }}">Produtos</a></li>
+                        <ul class="dropdown-menu border border-success">
+                            <li><a class="item dropdown-item text-success" href="{{ route('CatController.listCategorias') }}">Categorias</a></li>
+                            <li><a class="item dropdown-item text-success" href="{{ route('SubcatController.listSubcategorias') }}">Subcategorias</a></li>
+                            <li><a class="item dropdown-item text-success" href="{{ route('ProdController.listProdutos') }}">Produtos</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle active text-success" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" id="listas">Registros</a>
-                        <ul class="dropdown-menu border border-success" id="dropdown">
-                            <li><a class="dropdown-item text-success" href="{{ route('CatController.regCategorias') }}" id="regCat">Categorias</a></li>
-                            <li><a class="dropdown-item text-success" href="{{ route('SubcatController.regSubcategoria') }}" id="regSubcat">Subcategorias</a></li>
-                            <li><a class="dropdown-item text-success" href="{{ route('ProdController.regProdutos') }}" id="regProd">Produtos</a></li>
+                        <ul class="dropdown-menu border border-success">
+                            <li><a class="item dropdown-item text-success" href="{{ route('CatController.regCategorias') }}" id="regCat">Categorias</a></li>
+                            <li><a class="item dropdown-item text-success" href="{{ route('SubcatController.regSubcategoria') }}" id="regSubcat">Subcategorias</a></li>
+                            <li><a class="item dropdown-item text-success" href="{{ route('ProdController.regProdutos') }}" id="regProd">Produtos</a></li>
                         </ul>
                     </li>
                     <div id="definicoes" class="position-absolute end-0 me-2">
                         @yield('menubar-content')
-                        <form class="d-flex" id="searchBar" role="search" action="" method="">
+                        <form class="d-flex" id="searchBar" role="search" action="" method=""  autocomplete="off">
                             <input class="form-control me-2 border border-success btn btn-outline-none" type="search" aria-label="Pesquisar" placeholder="Pesquisar">
                             <button class="btn btn-outline-success" type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
                         </form>

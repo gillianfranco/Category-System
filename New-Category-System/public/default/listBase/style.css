@@ -26,7 +26,7 @@ li a{
     display: block;
 }
 
-li a#listas:hover #dropdown{
+li a#listas:hover ul{
     display: flex;
 }
 
@@ -61,6 +61,31 @@ li a#homepage:hover{
 #definicoes{
     display: flex;
     flex-direction: row;
+}
+
+.item{
+    height: 30px;
+    padding: 0px 5px;
+    box-sizing: border-box;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.item:hover{
+    padding-left: 7px;
+    transition: .3s;
+}
+
+::-webkit-scrollbar{
+    background-color: #00000000;
+    width: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #198754;
+    border-radius: 5px;
 }
 
 @media only screen and (max-width: 1000px){

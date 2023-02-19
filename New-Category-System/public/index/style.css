@@ -70,6 +70,31 @@ li a#homepage:hover{
     text-decoration: underline;
 }
 
+.item{
+    height: 30px;
+    padding: 0px 5px;
+    box-sizing: border-box;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.item:hover{
+    padding-left: 7px;
+    transition: .3s;
+}
+
+::-webkit-scrollbar{
+    background-color: #00000000;
+    width: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #198754;
+    border-radius: 5px;
+}
+
 @media only screen and (min-width: 1400px){
     #title{
         font-size: 150px;

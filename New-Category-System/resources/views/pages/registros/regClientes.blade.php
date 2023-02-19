@@ -5,7 +5,7 @@
 @section('title', 'Cadastro de Clientes')
 @section('content')
     <h1>Novo Cliente</h1>
-    <form action="{{ route('ClientController.getRegClientes') }}" method="POST">
+    <form action="{{ route('ClientController.getRegClientes') }}" method="post"  autocomplete="off">
         @csrf
         <div class="mb-3">
             <label for="nome" class="form-label">Nome</label>

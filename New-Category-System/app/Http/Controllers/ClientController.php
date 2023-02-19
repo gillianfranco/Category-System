@@ -8,18 +8,15 @@ use App\Models\Cliente;
 class ClientController extends Controller
 {
     public function listClientes(){
-        return view('pages.listas.listClientes');
+        $clientes = Cliente::get();
+        $ultimo = Cliente::orderBy('id', 'desc')->first();
+        return view('pages.listas.listClientes', ['clientes' => $clientes, 'ultimo' => $ultimo]);
     }
 
     public function tableListClientes(Request $request){
-        $resposta = $request->filtragem;
-        if($resposta == 'ultimo'){
-            $ultimo = Cliente::orderBy('id', 'desc')->first();
-            return view('pages.listas.listClientes', ['ultimo' => $ultimo]);
-        }else if($resposta == 'tudo'){
-            $clientes = Cliente::get();
-            return view('pages.listas.listClientes', ['clientes' => $clientes]);
-        }        
+        $clientes = Cliente::get();
+        $ultimo = Cliente::orderBy('id', 'desc')->first();
+        return view('pages.listas.listClientes', ['clientes' => $clientes, 'ultimo' => $ultimo]);       
     }
 
     public function regClientes(){

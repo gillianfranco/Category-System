@@ -1,3 +1,7 @@
+*{
+    background: #00000000;
+}
+
 li a{
     text-decoration: none;
 }
@@ -14,4 +18,58 @@ tr a{
     align-items: center;
     font-size: 10px;
     padding-top: -5px;
+}
+
+#filtro #select{
+    margin-left: 18px;
+}
+
+#filtro button{
+    margin-right: 41px;
+}
+
+#select input{
+    height: 47px;
+    width: 134px;
+    background-color: #00000000;
+    box-sizing: border-box;
+    border-radius: 7px;
+    outline: none;
+    color: #198754;
+    border: 0.5px solid #198754;
+    text-align: center;
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder{
+    color: #198754;
+}
+
+input::-moz-placeholder{
+    color: #198754;
+}
+
+::-webkit-scrollbar{
+    background-color: #00000000;
+    width: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #198754;
+    border-radius: 5px;
+}
+
+.item{
+    height: 30px;
+    padding: 0px 5px;
+    box-sizing: border-box;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.item:hover{
+    padding-left: 7px;
+    transition: .3s;
 }
