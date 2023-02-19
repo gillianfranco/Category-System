@@ -46,10 +46,6 @@
                     </li>
                     <div id="definicoes" class="position-absolute end-0 me-2">
                         @yield('menubar-content')
-                        <form class="d-flex" id="searchBar" role="search" action="" method=""  autocomplete="off">
-                            <input class="form-control me-2 border border-success btn btn-outline-none" type="search" aria-label="Pesquisar" placeholder="Pesquisar">
-                            <button class="btn btn-outline-success" type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
-                        </form>
                     </div>
                 </ul>
             </div>

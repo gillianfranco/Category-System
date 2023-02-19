@@ -31,5 +31,6 @@ Route::get('/registro-produtos', [ProdController::class, 'regProdutos'])->name('
 
 Route::get('/lista-clientes', [ClientController::class, 'listClientes'])->name('ClientController.listClientes');
 Route::post('/lista-clientes', [ClientController::class, 'tableListClientes'])->name('ClientController.tableListClientes');
+// Route::query('/lista-clientes', [ClientController::class, 'searchListClientes'])->name('ClientController.searchListClientes');
 Route::get('/registro-clientes', [ClientController::class, 'regClientes'])->name('ClientController.regClientes');
 Route::post('/registro-clientes', [ClientController::class, 'getRegClientes'])->name('ClientController.getRegClientes');
