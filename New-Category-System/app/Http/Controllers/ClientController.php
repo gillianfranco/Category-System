@@ -8,32 +8,27 @@ use App\Models\Cliente;
 class ClientController extends Controller
 {
     public function listClientes(){
-        $clientes = Cliente::get();
-        return view('pages.listas.listClientes', ['clientes' => $clientes]);
-    }
-
-    public function tableListClientes(Request $request){
-        $filtragem = $request->input('selectInput');
-        $pesquisa = $request->input('searchInput');
-        if(isset($filtragem)){
+        $pesquisa = request('searchInput');
+        $filtragem = request('selectInput');
+        if(isset($pesquisa)){
+            $clientePesq = Cliente::where('clienteNome', 'like', '%'.$pesquisa.'%')->get();
+            return view('pages.listas.listClientes', ['pesquisa' => $pesquisa, 'filtragem' => $filtragem, 'clientePesq' => $clientePesq]);
+        }else if($filtragem){
             if($filtragem == "Mostrar Último"){
                 $ultimo = Cliente::orderBy('id', 'desc')->first();
-                return view('pages.listas.listClientes', ['ultimo' => $ultimo]);
+                return view('pages.listas.listClientes', ['pesquisa' => $pesquisa, 'filtragem' => $filtragem, 'ultimo' => $ultimo]);
+            }else if($filtragem == "Mostrar Primeiro"){
+                $primeiro = Cliente::first();
+                return view('pages.listas.listClientes', ['pesquisa' => $pesquisa, 'filtragem' => $filtragem, 'primeiro' => $primeiro]);
             }else{
                 $clientes = Cliente::get();
-                return view('pages.listas.listClientes', ['clientes' => $clientes]);
+                return view('pages.listas.listClientes', ['pesquisa' => $pesquisa, 'filtragem' => $filtragem, 'clientes' => $clientes]);
             }
-        }else if(isset($pesquisa)){
-            $clientePesq = Cliente::where('clienteNome', 'LIKE', '%'.$pesquisa.'%')->get();
-            return view('pages.listas.listClientes', ['clientePesq' => $clientePesq]);
-        }    
+        }else{
+            $clientes = Cliente::get();
+            return view('pages.listas.listClientes', ['pesquisa' => $pesquisa, 'filtragem' => $filtragem, 'clientes' => $clientes]);
+        }
     }
-
-    // public function searchListClientes(Request $request){
-    //     $pesquisa = $request->input('searchInput');
-    //     $clientePesq = Cliente::where('clienteNome', 'LIKE', '%'.$pesquisa.'%');
-    //     return view('pages.listas.listClientes', ['clientePesq' => $clientePesq]);
-    // }
 
     public function regClientes(){
         return view('pages.registros.regClientes');

@@ -30,6 +30,7 @@ body{
     color:  #198754;
     position: absolute;
     z-index: 1;
+    text-shadow: 0 -0.05em 0.2em #fff, 0.01em -0.02em 0.15em #fff, 0.01em -0.05em 0.15em #fff;
 }
 
 #menuBar{

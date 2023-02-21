@@ -20,17 +20,21 @@ tr a{
     padding-top: -5px;
 }
 
+#searchInput{
+    color: #198754;
+}
+
 #filtro #select{
-    margin-left: 18px;
+    margin-left: 30px;
 }
 
 #filtro button{
-    margin-right: 41px;
+    margin-right: 40px;
 }
 
 #select input{
     height: 47px;
-    width: 134px;
+    width: 160px;
     background-color: #00000000;
     box-sizing: border-box;
     border-radius: 7px;
