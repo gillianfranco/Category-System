@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CatController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\SubcatController;
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ProdController;
 use App\Http\Controllers\SiteController;
 
@@ -25,6 +26,9 @@ Route::get('/registro-categorias', [CatController::class, 'regCategorias'])->nam
 
 Route::get('/lista-subcategorias', [SubcatController::class, 'listSubcategorias'])->name('SubcatController.listSubcategorias');
 Route::get('/registro-subcategorias', [SubcatController::class, 'regSubcategorias'])->name('SubcatController.regSubcategoria');
+
+Route::get('/lista-marcas', [BrandController::class, 'listMarcas'])->name('BrandController.listMarcas');
+Route::get('/registro-marcas', [BrandController::class, 'regMarcas'])->name('BrandController.regMarcas');
 
 Route::get('/lista-produtos', [ProdController::class, 'listProdutos'])->name('ProdController.listProdutos');
 Route::get('/registro-produtos', [ProdController::class, 'regProdutos'])->name('ProdController.regProdutos');

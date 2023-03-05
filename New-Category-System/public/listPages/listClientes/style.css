@@ -11,6 +11,23 @@ thead{
     justify-content: center;
 }
 
+tr{
+    text-align: center;
+}
+
+thead tr{
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
+}
+
+.row-table{
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+    transition: 1s;
+}
+
+.row-table:hover{
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+}
+
 tr a{
     height: 27px;
     display: flex;
@@ -51,29 +68,4 @@ tr a{
 
 input::-moz-placeholder{
     color: #198754;
-}
-
-::-webkit-scrollbar{
-    background-color: #00000000;
-    width: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb{
-    background-color: #198754;
-    border-radius: 5px;
-}
-
-.item{
-    height: 30px;
-    padding: 0px 5px;
-    box-sizing: border-box;
-    transition: .3s;
-    cursor: pointer;
-}
-
-.item:hover{
-    padding-left: 7px;
-    transition: .3s;
 }

@@ -16,12 +16,13 @@ return new class extends Migration
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
             $table->string('clienteNome');
-            $table->string('email');
-            $table->string('telefone');
-            $table->string('endereco');
-            // $table->integer('nCompras');
-            // $table->integer('nDevolucoes');
-            // $table->float('capitalGasto');
+            $table->string('email')->nullable();
+            $table->string('telefone')->nullable();
+            $table->string('endereco')->nullable();
+            $table->date('dataNasc')->nullable();
+            $table->integer('nCompras');
+            $table->integer('nDevolucoes');
+            $table->float('capitalGasto');
             $table->timestamps();
         });
     }

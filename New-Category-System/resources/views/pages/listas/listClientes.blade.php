@@ -34,21 +34,29 @@
         <table class="table border-success">
             <thead class="text-success">
                 <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Telefone</th>
-                    <th scope="col">Endereço</th>
+                    <th scope="col"><nobr>ID</nobr></th>
+                    <th scope="col"><nobr>Nome</nobr></th>
+                    <th scope="col"><nobr>Email</nobr></th>
+                    <th scope="col"><nobr>Telefone</nobr></th>
+                    <th scope="col"><nobr>Endereço</nobr></th>
+                    <th scope="col"><nobr>Data de Nascimento</nobr></th>
+                    <th scope="col"><nobr>Número de Compras</nobr></th>
+                    <th scope="col"><nobr>Número de Devoluções</nobr></th>
+                    <th scope="col"><nobr>Capital Gasto</nobr></th>
                 </tr>
             </thead>
             <tbody class="text-success" id="table">
                 @foreach($clientePesq as $cliente)
-                    <tr>
-                        <td>{{ $cliente->id }}</td>
-                        <td>{{ $cliente->clienteNome }}</td>
-                        <td>{{ $cliente->email }}</td>
-                        <td>{{ $cliente->telefone }}</td>
-                        <td>{{ $cliente->endereco }}</td>
+                    <tr class="row-table">
+                        <td><nobr>{{ $cliente->id }}</nobr></td>
+                        <td><nobr>{{ $cliente->clienteNome }}</nobr></td>
+                        <td><nobr>{{ $cliente->email }}</nobr></td>
+                        <td><nobr>{{ $cliente->telefone }}</nobr></td>
+                        <td><nobr>{{ $cliente->endereco }}</nobr></td>
+                        <td><nobr>{{ $cliente->dataNasc }}</nobr></td>
+                        <td><nobr>{{ $cliente->nCompras }}</nobr></td>
+                        <td><nobr>{{ $cliente->nDevolucoes }}</nobr></td>
+                        <td><nobr>{{ $cliente->capitalGasto }}</nobr></td>
                     </tr>
                 @endforeach
             </tbody>
@@ -57,21 +65,29 @@
         <table class="table border-success">
             <thead class="text-success">
                 <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Telefone</th>
-                    <th scope="col">Endereço</th>
+                    <th scope="col"><nobr>ID</nobr></th>
+                    <th scope="col"><nobr>Nome</nobr></th>
+                    <th scope="col"><nobr>Email</nobr></th>
+                    <th scope="col"><nobr>Telefone</nobr></th>
+                    <th scope="col"><nobr>Endereço</nobr></th>
+                    <th scope="col"><nobr>Data de Nascimento</nobr></th>
+                    <th scope="col"><nobr>Número de Compras</nobr></th>
+                    <th scope="col"><nobr>Número de Devoluções</nobr></th>
+                    <th scope="col"><nobr>Capital Gasto</nobr></th>
                 </tr>
             </thead>
             <tbody class="text-success" id="table">
-                @foreach($clientes as $cliente)
-                    <tr>
-                        <td>{{ $cliente->id }}</td>
-                        <td>{{ $cliente->clienteNome }}</td>
-                        <td>{{ $cliente->email }}</td>
-                        <td>{{ $cliente->telefone }}</td>
-                        <td>{{ $cliente->endereco }}</td>
+                @foreach($clientes as $cliente) 
+                    <tr class="row-table">
+                        <td><nobr>{{ $cliente->id }}</nobr></td>
+                        <td><nobr>{{ $cliente->clienteNome }}</nobr></td>
+                        <td><nobr>{{ $cliente->email }}</nobr></td>
+                        <td><nobr>{{ $cliente->telefone }}</nobr></td>
+                        <td><nobr>{{ $cliente->endereco }}</nobr></td>
+                        <td><nobr>{{ $cliente->dataNasc }}</nobr></td>
+                        <td><nobr>{{ $cliente->nCompras }}</nobr></td>
+                        <td><nobr>{{ $cliente->nDevolucoes }}</nobr></td>
+                        <td><nobr>{{ $cliente->capitalGasto }}</nobr></td>
                     </tr>
                 @endforeach
             </tbody>
@@ -80,20 +96,28 @@
         <table class="table border-success">
             <thead class="text-success">
                 <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Telefone</th>
-                    <th scope="col">Endereço</th>
+                    <th scope="col"><nobr>ID</nobr></th>
+                    <th scope="col"><nobr>Nome</nobr></th>
+                    <th scope="col"><nobr>Email</nobr></th>
+                    <th scope="col"><nobr>Telefone</nobr></th>
+                    <th scope="col"><nobr>Endereço</nobr></th>
+                    <th scope="col"><nobr>Data de Nascimento</nobr></th>
+                    <th scope="col"><nobr>Número de Compras</nobr></th>
+                    <th scope="col"><nobr>Número de Devoluções</nobr></th>
+                    <th scope="col"><nobr>Capital Gasto</nobr></th>
                 </tr>
             </thead>
             <tbody class="text-success" id="table">
-                <tr>
-                    <td>{{ $primeiro->id }}</td>
-                    <td>{{ $primeiro->clienteNome }}</td>
-                    <td>{{ $primeiro->email }}</td>
-                    <td>{{ $primeiro->telefone }}</td>
-                    <td>{{ $primeiro->endereco }}</td>
+                <tr class="row-table">
+                    <td><nobr>{{ $primeiro->id }}</nobr></td>
+                    <td><nobr>{{ $primeiro->clienteNome }}</nobr></td>
+                    <td><nobr>{{ $primeiro->email }}</nobr></td>
+                    <td><nobr>{{ $primeiro->telefone }}</nobr></td>
+                    <td><nobr>{{ $primeiro->endereco }}</nobr></td>
+                    <td><nobr>{{ $primeiro->dataNasc }}</nobr></td>
+                    <td><nobr>{{ $primeiro->nCompras }}</nobr></td>
+                    <td><nobr>{{ $primeiro->nDevolucoes }}</nobr></td>
+                    <td><nobr>{{ $primeiro->capitalGasto }}</nobr></td>
                 </tr>
             </tbody>
         </table>
@@ -101,20 +125,28 @@
         <table class="table border-success">
             <thead class="text-success">
                 <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Telefone</th>
-                    <th scope="col">Endereço</th>
+                    <th scope="col"><nobr>ID</nobr></th>
+                    <th scope="col"><nobr>Nome</nobr></th>
+                    <th scope="col"><nobr>Email</nobr></th>
+                    <th scope="col"><nobr>Telefone</nobr></th>
+                    <th scope="col"><nobr>Endereço</nobr></th>
+                    <th scope="col"><nobr>Data de Nascimento</nobr></th>
+                    <th scope="col"><nobr>Número de Compras</nobr></th>
+                    <th scope="col"><nobr>Número de Devoluções</nobr></th>
+                    <th scope="col"><nobr>Capital Gasto</nobr></th>
                 </tr>
             </thead>
             <tbody class="text-success" id="table">
-                <tr>
-                    <td>{{ $ultimo->id }}</td>
-                    <td>{{ $ultimo->clienteNome }}</td>
-                    <td>{{ $ultimo->email }}</td>
-                    <td>{{ $ultimo->telefone }}</td>
-                    <td>{{ $ultimo->endereco }}</td>
+                <tr class="row-table">
+                    <td><nobr>{{ $ultimo->id }}</nobr></td>
+                    <td><nobr>{{ $ultimo->clienteNome }}</nobr></td>
+                    <td><nobr>{{ $ultimo->email }}</nobr></td>
+                    <td><nobr>{{ $ultimo->telefone }}</nobr></td>
+                    <td><nobr>{{ $ultimo->endereco }}</nobr></td>
+                    <td><nobr>{{ $primeiro->dataNasc }}</nobr></td>
+                    <td><nobr>{{ $primeiro->nCompras }}</nobr></td>
+                    <td><nobr>{{ $primeiro->nDevolucoes }}</nobr></td>
+                    <td><nobr>{{ $primeiro->capitalGasto }}</nobr></td>
                 </tr>
             </tbody>
         </table>
