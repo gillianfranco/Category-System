@@ -53,7 +53,7 @@
                 </div>
             </div>
         </nav>
-        <span class="animationBar"></span>
+        <span class="animationBar"></span> 
     </div>
     
     
